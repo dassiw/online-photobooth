@@ -1,0 +1,17 @@
+# Dependencies & build output
+node_modules/
+dist/
+dist-ssr/
+
+# Environment & logs
+.env
+.env.*
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Exclude large raw Canva source PDFs (converted PNGs in public/canva-templates/ are tracked)
+/canva-templates/

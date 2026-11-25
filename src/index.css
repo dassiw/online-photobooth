@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --bg-cream: #FAF9F6;
+  --bg-card: #FFFFFF;
+  --border-warm: #EAE3DC;
+  --accent-rose: #D96B84;
+  --accent-rose-soft: #FDE8EE;
+  --accent-sky: #5B9BD5;
+  --accent-sky-soft: #E8F2FC;
+  --ink-warm: #2C2627;
+  --ink-muted: #7A6F72;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--ink-warm);
+}
+
+.font-display {
+  font-family: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+
+.font-mono-booth {
+  font-family: 'Space Mono', monospace;
+}
+
+@keyframes flash-burst {
+  0% {
+    opacity: 0.96;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes countdown-pop {
+  0% {
+    transform: scale(0.55);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 0.92;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.25;
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+.animate-flash-burst {
+  animation: flash-burst 420ms ease-out forwards;
+}
+
+.animate-countdown-pop {
+  animation: countdown-pop 950ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+/* Soft subtle polka-dot background for hero / workspace accents */
+.bg-purikura-dots {
+  background-image: radial-gradient(rgba(217, 107, 132, 0.12) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
